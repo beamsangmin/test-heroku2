@@ -9,8 +9,4 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/foo')
-def index():
-    return 'bar'
-
 if __name__ == '__main__': app.run(debug=True)
