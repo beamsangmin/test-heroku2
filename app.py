@@ -22,8 +22,8 @@ def callback():
     body = request.get_data(as_text=True)
     # print(body)
     req = request.get_json(silent=True, force=True)
-    intent = req["queryResult"]["intent"]["displayName"] 
-    text = req['originalDetectIntentRequest']['payload']['data']['message']['text'] 
+    text = req["queryResult"]["intent"]["displayName"] 
+    intent = req['originalDetectIntentRequest']['payload']['data']['message']['text'] 
     reply_token = req['originalDetectIntentRequest']['payload']['data']['replyToken']
     id = req['originalDetectIntentRequest']['payload']['data']['source']['userId']
     disname = line_bot_api.get_profile(id).display_name
