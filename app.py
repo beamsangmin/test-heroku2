@@ -72,11 +72,11 @@ def callback():
 def reply(intent,text,reply_token,id,disname):
     print(intent)
     if intent == 'Vendor':
-        text_message = TextSendMessage(text='Vendor List')
+        text_message = TextSendMessage(text='สวัสดี Vendor '+disname)
         line_bot_api.reply_message(reply_token,text_message)
         
     if intent == 'Customer':
-        text_message = TextSendMessage(text='Customer List')
+        text_message = TextSendMessage(text='สวัสดี Customer ' + disname)
         line_bot_api.reply_message(reply_token,text_message)
         
 def replyVendor(intent,text,reply_token,id,disname):
