@@ -70,6 +70,7 @@ def callback():
     return 'OK'
 
 def reply(intent,text,reply_token,id,disname):
+    print(intent)
     if intent == 'Vendor':
         text_message = TextSendMessage(text='Vendor List')
         line_bot_api.reply_message(reply_token,text_message)
