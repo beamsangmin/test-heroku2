@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/test", methods=['POST'])
+@app.route("/test", methods=['GET'])
 def callback():
     print('xxxxx')
     return 'OK'
